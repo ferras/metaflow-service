@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@master
       - uses: docker/build-push-action@master
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
@@ -18,4 +19,4 @@ jobs:
           repository: ferras1/metadata_service
           tag_with_ref: true
           tag_with_sha: true
-          dockerfile: /github/workspace/metadata_service
+          dockerfile: ${{ github.workspace }}/metadata_service/Dockerfile
