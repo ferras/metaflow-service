@@ -18,4 +18,4 @@ jobs:
           repository: ferras1/metadata_service
           tag_with_ref: true
           tag_with_sha: true
-      
+          dockerfile: ../Dockerfile
