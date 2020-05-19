@@ -12,6 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@master
+      - name: build assets
+        working-directory: ${{ github.workspace }}
+        run: ls -la
       - uses: docker/build-push-action@master
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
