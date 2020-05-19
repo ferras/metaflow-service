@@ -1,19 +1,20 @@
 import asyncio
 import os
+import click
 
 from aiohttp import web
 from aiohttp_swagger import *
 
-from .api.run import RunApi
-from .api.flow import FlowApi
+from test_metadata_service.api.run import RunApi
+from test_metadata_service.api.flow import FlowApi
 
-from .api.step import StepApi
-from .api.task import TaskApi
-from .api.artifact import ArtificatsApi
-from .api.admin import AuthApi
+from test_metadata_service.api.step import StepApi
+from test_metadata_service.api.task import TaskApi
+from test_metadata_service.api.artifact import ArtificatsApi
+from test_metadata_service.api.admin import AuthApi
 
-from .api.metadata import MetadataApi
-from .data.postgres_async_db import AsyncPostgresDB
+from test_metadata_service.api.metadata import MetadataApi
+from test_metadata_service.data.postgres_async_db import AsyncPostgresDB
 
 
 def app(loop=None):
