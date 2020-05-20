@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@release-branch
       - name: build assets
         working-directory: ${{ github.workspace }}
         run: ls -la
-      - uses: docker/build-push-action@master
+      - uses: docker/build-push-action@release-branch
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
