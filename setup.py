@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 setup(
   name = 'metadata_service',         # How you named your package folder (MyLib)
   packages = ['metadata_service'],   # Chose the same as "name"
@@ -9,7 +9,7 @@ setup(
   author_email = 'help@metaflow.org',      # Type in your E-Mail
   url = 'https://github.com/ferras/metaflow-service',   # Provide either the link to your github or to your website
   keywords = ['metaflow', 'machinelearning', 'ml'],   # Keywords that define your package best
-  py_modules=['metadata_service'],
+  packages=find_packages(),
   entry_points='''
         [console_scripts]
         metadata_service=metadata_service.server:main
