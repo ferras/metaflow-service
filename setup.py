@@ -9,6 +9,11 @@ setup(
   author_email = 'help@metaflow.org',      # Type in your E-Mail
   url = 'https://github.com/ferras/metaflow-service',   # Provide either the link to your github or to your website
   keywords = ['metaflow', 'machinelearning', 'ml'],   # Keywords that define your package best
+  py_modules=['metadata_service'],
+  entry_points='''
+        [console_scripts]
+        metadata_service=metadata_service.server:main
+   ''',
   install_requires=[            # I get to this in a second
           'aiohttp',
           'aiohttp_swagger',

@@ -33,7 +33,7 @@ def app(loop=None):
     return app
 
 
-if __name__ == "__main__":
+def main():
     loop = asyncio.get_event_loop()
     the_app = app(loop)
     handler = the_app.make_handler()
@@ -47,3 +47,20 @@ if __name__ == "__main__":
         loop.run_forever()
     except KeyboardInterrupt:
         pass
+
+
+if __name__ == "__main__":
+    main()
+    # loop = asyncio.get_event_loop()
+    # the_app = app(loop)
+    # handler = the_app.make_handler()
+    # port = os.environ.get("MF_METADATA_PORT", 8080)
+    # host = str(os.environ.get("MF_METADATA_HOST", "0.0.0.0"))
+    # f = loop.create_server(handler, host, port)
+    #
+    # srv = loop.run_until_complete(f)
+    # print("serving on", srv.sockets[0].getsockname())
+    # try:
+    #     loop.run_forever()
+    # except KeyboardInterrupt:
+    #     pass
