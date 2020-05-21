@@ -4,16 +4,16 @@ import os
 from aiohttp import web
 from aiohttp_swagger import *
 
-from .api.run import RunApi
-from .api.flow import FlowApi
+from metadata_service.api.run import RunApi
+from metadata_service.api.flow import FlowApi
 
-from .api.step import StepApi
-from .api.task import TaskApi
-from .api.artifact import ArtificatsApi
-from .api.admin import AuthApi
+from metadata_service.api.step import StepApi
+from metadata_service.api.task import TaskApi
+from metadata_service.api.artifact import ArtificatsApi
+from metadata_service.api.admin import AuthApi
 
-from .api.metadata import MetadataApi
-from .data.postgres_async_db import AsyncPostgresDB
+from metadata_service.api.metadata import MetadataApi
+from metadata_service.data.postgres_async_db import AsyncPostgresDB
 
 
 def app(loop=None):
