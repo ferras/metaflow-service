@@ -25,6 +25,7 @@ Optionally you can also overrider the host and port the service runs on
 >python3 -m metadata_service.server
 >```
 
+
 Swagger UI: http://localhost:8080/api/doc
 
 #### Using docker-compose
